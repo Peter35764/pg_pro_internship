@@ -175,6 +175,8 @@ debug: $(STATIC_LIB)
 	$(LD) $(LFLAGS) $(DEBUG_SOURCE) $(STATIC_LIB) $(LIBS) -o $(DEBUG_EXE)
 	./$(DEBUG_EXE)
 
+check : test
+
 test: $(TESTS_OBJ_DIR) $(STATIC_LIB) $(TEST_OBJ_FILES) $(ALL_HEADERS)
 	$(LD) $(LFLAGS) $(TEST_OBJ_FILES) $(STATIC_LIB) $(LIBS) -o $(TEST_EXE) 
 	-./$(TEST_EXE)
