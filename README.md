@@ -5,7 +5,7 @@
 ## Инструкция
 
 ```$ make all``` - компиляция и запуск тестов с формированием отчета о прокрытии (./object_files_tmp/report_tmp/index.html).  
-```$ make test``` - запуск тестов.   
+```$ make check``` - запуск тестов.   
 ```$ make debug``` - запуск отладочного кода из файла /test/debug.c.  
 ```$ make gcov``` - формирование отчета о покрытии (./object_files_tmp/report_tmp/index.html).     
 ```$ make quadratic_equation.a``` - компиляция статической библиотеки модуля. Хеддер quadratic_equation.h.   
