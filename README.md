@@ -4,7 +4,8 @@
 
 ## Инструкция
 
-Модуль написан с расчетом использования на linux (arch, alpine, debian) или mac-os.  
+**Модуль написан с расчетом запуска на linux (arch, alpine, debian) или macOS.**  
+
 ```$ make all``` - компиляция и запуск тестов с формированием отчета о прокрытии (./object_files_tmp/report_tmp/index.html).  
 ```$ make check``` - запуск тестов.   
 ```$ make debug``` - запуск отладочного кода из файла /test/debug.c.  

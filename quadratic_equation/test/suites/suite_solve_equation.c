@@ -23,6 +23,18 @@ START_TEST(test0_err2) {
 }
 END_TEST
 
+START_TEST(test0_err3) {
+  double a = 2;
+  double b = 2;
+  double c = 2;
+
+  double complex *x1 = NULL, *x2 = NULL;
+  int err = solve_equation(a, b, c, x1, x2);
+
+  ck_assert_int_eq(err, 3);
+}
+END_TEST
+
 START_TEST(test0) {
   double a = 1;
   double b = -9;
@@ -128,9 +140,14 @@ Suite *test_solve_equation(void) {
   TCase *tc_err1 = tcase_create("err1");
   tcase_add_test(tc_err1, test0_err1);
   suite_add_tcase(s, tc_err1);
+
   TCase *tc_err2 = tcase_create("err2");
   tcase_add_test(tc_err2, test0_err2);
   suite_add_tcase(s, tc_err2);
+
+  TCase *tc_err3 = tcase_create("err3");
+  tcase_add_test(tc_err2, test0_err3);
+  suite_add_tcase(s, tc_err3);
 
   TCase *tc_body = tcase_create("body");
   tcase_add_test(tc_body, test0);
